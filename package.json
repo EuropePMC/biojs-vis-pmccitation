@@ -1,7 +1,7 @@
 {
   "name": "biojs-vis-pmccitation",
   "description": "Reads principal data connected to the citation specified in the Europe PMC system ",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/ftalo/biojs-vis-pmccitation",
   "author": {
     "name": "Francesco Talo",
