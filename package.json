@@ -1,6 +1,6 @@
 {
   "name": "biojs-vis-pmccitation",
-  "description": "Reads principal data connected to the citation specified in the Europe PMC system ",
+  "description": "Europe PMC citations viewer (http://www.europepmc.org). It retrieves and displays the principal data (such as authors list, title, journal and source) of the citations list that matches the query specified in the Europe PMC system or the principal data of a specified citation(http://europepmc.org)",
   "version": "0.1.2",
   "homepage": "https://github.com/ftalo/biojs-vis-pmccitation",
   "author": {
@@ -68,7 +68,7 @@
     "snippets": [
       "snippets"
     ],
-    "first": "citation"
+    "first": "citationlist"
   },
   "keywords": [
     "citation",
