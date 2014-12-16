@@ -174,35 +174,6 @@ It decides which citations data to display. It could be one of the following:
  </ul>
 	
 
-@example 
-// Example of viewing a list of Europe PMC citations matching a query
-//All the citations data will be retrieved through the Europe PMC RESTFUL web service located at http://www.ebi.ac.uk/europepmc/webservices/rest/search/
-
-      var instance = new  CitationList({
-   		target: 'YourOwnDivId',
-   		query:'p53',
-       	width: 400,
-         height: 400,
-       	proxyUrl: '../biojs/dependencies/proxy/proxy.jsp',
-       	numberResults: 10,
-       	displayStyle: CitationList.FULL_STYLE,
-       	elementOrder: CitationList.TITLE_FIRST
-       });	
-     
-     instance.onResultsLoaded(function (){
-   	 alert ('Citations loaded successfully');
-    });
-    
-    instance.onRequestError(function (err){
-  	  alert ('Error during citations data retrieving:'+err.error);
-    });
-    
-     //triggers the citation data loading process that will use the Europe PMC RESTFUL Web service
-    instance.loadResults();
-     
-
-
-
 ## Contributing
 
 Please submit all issues and pull requests to the [ftalo/biojs-vis-pmccitation](http://github.com/ftalo/biojs-vis-pmccitation) repository!
