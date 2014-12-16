@@ -10,4 +10,4 @@ var instance = new app.CitationList({
 });	
 
 //triggers the citation data loading process that will use the Europe PMC RESTFUL Web service
-instance.loadResults();
+instance.load();
