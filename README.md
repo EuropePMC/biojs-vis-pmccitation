@@ -67,9 +67,9 @@ This component consists of two view `Citation` and `CitationList`.
      <li>Citation.TITLE_FIRST:"TITLE_FIRST".  
          In this case the order of the elements will be:
          <ol>
-      	    <li>TITLE</li>
-      	    <li>AUTHORS</li>
-      	    <li>JOURNAL</li>
+            <li>TITLE</li>
+            <li>AUTHORS</li>
+            <li>JOURNAL</li>
       	    <li>SOURCE/IDENTIFIER</li>
         </ol>
       </li>
@@ -80,7 +80,7 @@ This component consists of two view `Citation` and `CitationList`.
             <li>TITLE</li>
             <li>JOURNAL</li>
             <li>SOURCE/IDENTIFIER</li>
-      	</ol>
+      </ol>
       </li>
 </ul>
 
@@ -137,7 +137,7 @@ It decides which citation data to display. It could be one of the following:
      <li>CitationList.TITLE_FIRST:"TITLE_FIRST".  
          In this case the order of the elements will be:
          <ol>
-      	    <li>TITLE</li>
+            <li>TITLE</li>
             <li>AUTHORS</li>
             <li>JOURNAL</li>
             <li>SOURCE/IDENTIFIER</li>
@@ -146,7 +146,7 @@ It decides which citation data to display. It could be one of the following:
       <li>CitationList.AUTHORS_FIRST:"AUTHORS_FIRST". 
       In this case the order of the elements will be:
          <ol>
-      	    <li>AUTHORS</li>
+            <li>AUTHORS</li>
             <li>TITLE</li>
             <li>JOURNAL</li>
             <li>SOURCE/IDENTIFIER</li>
@@ -161,7 +161,7 @@ It decides which citations data to display. It could be one of the following:
      <li>CitationList.FULL_STYLE:"FULL_STYLE".  
          In this case all the citations data will be displayed:
          <ol>
-      	    <li>TITLE</li>
+            <li>TITLE</li>
             <li>AUTHORS</li>
             <li>JOURNAL</li>
             <li>SOURCE/IDENTIFIER</li>
