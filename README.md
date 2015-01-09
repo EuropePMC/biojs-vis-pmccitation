@@ -70,7 +70,7 @@ This component consists of two view `Citation` and `CitationList`.
             <li>TITLE</li>
             <li>AUTHORS</li>
             <li>JOURNAL</li>
-      	    <li>SOURCE/IDENTIFIER</li>
+            <li>SOURCE/IDENTIFIER</li>
         </ol>
       </li>
       <li>Citation.AUTHORS_FIRST:"AUTHORS_FIRST". 
@@ -90,7 +90,7 @@ It decides which citation data to display. It could be one of the following:
      <li>Citation.FULL_STYLE:"FULL_STYLE".  
          In this case all the citation data will be displayed:
          <ol>
-      	    <li>TITLE</li>
+            <li>TITLE</li>
             <li>AUTHORS</li>
             <li>JOURNAL</li>
             <li>SOURCE/IDENTIFIER</li>
@@ -171,7 +171,7 @@ It decides which citations data to display. It could be one of the following:
       In this case only the citations title will be displayed
       </li>
  </ul>
-	
+
 
 ## Contributing
 
