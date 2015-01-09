@@ -40,15 +40,15 @@ This component consists of two view `Citation` and `CitationList`.
 @option {string} source
     Source of the citation of which we want to show the data. It could be one of the following constants: 
     <ul>
-    	<li> Citation.MED_SOURCE:"MED"</li>
+       <li> Citation.MED_SOURCE:"MED"</li>
        <li> Citation.PMC_SOURCE:"PMC"</li>
-   	<li> Citation.PAT_SOURCE:"PAT"</li>
-   	<li> Citation.ETH_SOURCE:"ETH"</li>
-   	<li> Citation.HIR_SOURCE:"HIR"</li>
-   	<li> Citation.CTX_SOURCE:"CTX"</li>
-   	<li> Citation.CBA_SOURCE:"CBA"</li>
-   	<li> Citation.AGR_SOURCE:"AGR"</li>
-   	<li> Citation.DOI_SOURCE:"DOI"</li>
+       <li> Citation.PAT_SOURCE:"PAT"</li>
+       <li> Citation.ETH_SOURCE:"ETH"</li>
+       <li> Citation.HIR_SOURCE:"HIR"</li>
+       <li> Citation.CTX_SOURCE:"CTX"</li>
+       <li> Citation.CBA_SOURCE:"CBA"</li>
+       <li> Citation.AGR_SOURCE:"AGR"</li>
+       <li> Citation.DOI_SOURCE:"DOI"</li>
     </ul>
     
 
@@ -64,38 +64,37 @@ This component consists of two view `Citation` and `CitationList`.
 @option {string} [elementOrder="TITLE_FIRST"] 
 	  It decides the order of display of the citation data. It could be one of the following:
 <ul>
-		<li>Citation.TITLE_FIRST:"TITLE_FIRST".  
+     <li>Citation.TITLE_FIRST:"TITLE_FIRST".  
          In this case the order of the elements will be:
-      	<ol>
-      		<li>TITLE</li>
-         	<li>AUTHORS</li>
-         	<li>JOURNAL</li>
-         	<li>SOURCE/IDENTIFIER</li>
-      	</ol>
+         <ol>
+      	    <li>TITLE</li>
+      	    <li>AUTHORS</li>
+      	    <li>JOURNAL</li>
+      	    <li>SOURCE/IDENTIFIER</li>
+        </ol>
       </li>
       <li>Citation.AUTHORS_FIRST:"AUTHORS_FIRST". 
       In this case the order of the elements will be:
-      	<ol>
-      		<li>AUTHORS</li>
-         	<li>TITLE</li>
-         	<li>JOURNAL</li>
-         	<li>SOURCE/IDENTIFIER</li>
+      <ol>
+            <li>AUTHORS</li>
+            <li>TITLE</li>
+            <li>JOURNAL</li>
+            <li>SOURCE/IDENTIFIER</li>
       	</ol>
       </li>
 </ul>
 
 @option {string} [displayStyle="FULL_STYLE"] 
 It decides which citation data to display. It could be one of the following:
-
- <ul>
-		<li>Citation.FULL_STYLE:"FULL_STYLE".  
+<ul>
+     <li>Citation.FULL_STYLE:"FULL_STYLE".  
          In this case all the citation data will be displayed:
-      	<ol>
-      		<li>TITLE</li>
-         	<li>AUTHORS</li>
-         	<li>JOURNAL</li>
-         	<li>SOURCE/IDENTIFIER</li>
-      	</ol>
+         <ol>
+      	    <li>TITLE</li>
+            <li>AUTHORS</li>
+            <li>JOURNAL</li>
+            <li>SOURCE/IDENTIFIER</li>
+         </ol>
       </li>
       <li>Citation.TITLE_ONLY_STYLE:"TITLE_ONLY_STYLE". 
       In this case only the citation title will be displayed
@@ -135,23 +134,23 @@ It decides which citation data to display. It could be one of the following:
 @option {string} [elementOrder="TITLE_FIRST"] 
 	  It decides the order of display of the citations data. It could be one of the following:
 <ul>
-		<li>CitationList.TITLE_FIRST:"TITLE_FIRST".  
+     <li>CitationList.TITLE_FIRST:"TITLE_FIRST".  
          In this case the order of the elements will be:
-      	<ol>
-      		<li>TITLE</li>
-         	<li>AUTHORS</li>
-         	<li>JOURNAL</li>
-         	<li>SOURCE/IDENTIFIER</li>
-      	</ol>
+         <ol>
+      	    <li>TITLE</li>
+            <li>AUTHORS</li>
+            <li>JOURNAL</li>
+            <li>SOURCE/IDENTIFIER</li>
+         </ol>
       </li>
       <li>CitationList.AUTHORS_FIRST:"AUTHORS_FIRST". 
       In this case the order of the elements will be:
-      	<ol>
-      		<li>AUTHORS</li>
-         	<li>TITLE</li>
-         	<li>JOURNAL</li>
-         	<li>SOURCE/IDENTIFIER</li>
-      	</ol>
+         <ol>
+      	    <li>AUTHORS</li>
+            <li>TITLE</li>
+            <li>JOURNAL</li>
+            <li>SOURCE/IDENTIFIER</li>
+         </ol>
       </li>
 </ul>
 
@@ -159,14 +158,14 @@ It decides which citation data to display. It could be one of the following:
 It decides which citations data to display. It could be one of the following:
 
  <ul>
-		<li>CitationList.FULL_STYLE:"FULL_STYLE".  
+     <li>CitationList.FULL_STYLE:"FULL_STYLE".  
          In this case all the citations data will be displayed:
-      	<ol>
-      		<li>TITLE</li>
-         	<li>AUTHORS</li>
-         	<li>JOURNAL</li>
-         	<li>SOURCE/IDENTIFIER</li>
-      	</ol>
+         <ol>
+      	    <li>TITLE</li>
+            <li>AUTHORS</li>
+            <li>JOURNAL</li>
+            <li>SOURCE/IDENTIFIER</li>
+         </ol>
       </li>
       <li>CitationList.TITLE_ONLY_STYLE:"TITLE_ONLY_STYLE". 
       In this case only the citations title will be displayed
