@@ -1,10 +1,10 @@
 {
   "name": "biojs-vis-pmccitation",
-  "description": "Europe PMC citations viewer (http://www.europepmc.org). It retrieves and displays the principal data (such as authors list, title, journal and source) either of a single citation or of the citations list that matches the query specified in the Europe PMC system.",
+  "description": "Europe PMC citations viewer (http://www.europepmc.org) retrieves and displays article metadata (such as authors, title, journal, publication year, abstracts) for articles available in Europe PMC. Europe PMC covers all of PubMed (updated daily) and PMC full text articles, as well as other sources of abstracts such as Agricola abstracts and global life sciences patents. Two views are offered: (1) a single citation, in which all metadata and the abstracts (if available) are shown and (2) citations list, which, in response to a query, returns upto 25 records (plus a link to show more, should the query return more than 25 results). Europe PMC is delivered by the EMBL-EBI.",
   "version": "0.1.3",
   "homepage": "https://github.com/ftalo/biojs-vis-pmccitation",
   "author": {
-    "name": "Francesco Talo",
+    "name": "Francesco Talo'",
     "email": "ftalo@ebi.ac.uk"
   },
   "repository": {
@@ -73,6 +73,12 @@
   "keywords": [
     "citation",
     "pmc",
+    "PubMed",
+    "Research Articles",
+    "Open Access",
+    "PubMed Central",
+    "Abstracts",
+    "References",
     "biojs"
   ]
 }
