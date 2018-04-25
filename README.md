@@ -1,15 +1,15 @@
 # biojs-vis-pmccitation
 
-[![NPM version](http://img.shields.io/npm/v/biojs-vis-pmccitation.svg)](https://www.npmjs.org/package/biojs-vis-pmccitation) 
+[![NPM version](http://img.shields.io/npm/v/biojs-vis-pmccitation.svg)](https://www.npmjs.org/package/biojs-vis-pmccitation)
 
-> Reads principal data connected to the citation specified in the Europe PMC system 
+> Reads principal data connected to the citation specified in the Europe PMC system
 
 ## Getting Started
 Install the module with: `npm install biojs-vis-pmccitation`
 
 ```javascript
 var pmc = require('biojs-vis-pmccitation');
-var instance = pmc.Citation(opts); (or CitationList)
+var instance = new pmc.Citation(opts); (or CitationList)
 //triggers the citation data loading process that will use the Europe PMC RESTFUL Web service
 instance.load();
 ```
@@ -21,50 +21,47 @@ This component consists of two view `Citation` and `CitationList`.
 ### Citation
 
 @param {Object} options An object with the options for Citation component.
-   
+
 @option {string} [target='YourOwnDivId']
    Identifier of the DIV tag where the component should be displayed.
-   
-@option {int} width 
+
+@option {int} width
    Width in pixels.
-   
-@option {int} [height=undefined] 
-   Height in pixels. Optional parameter. 
+
+@option {int} [height=undefined]
+   Height in pixels. Optional parameter.
    Where specified the div container will extend its length up to that value, and
-   if the actual length exceeds that value a "Show more Data/Show fewer Data" link will be displayed at the bottom.    
-   
+   if the actual length exceeds that value a "Show more Data/Show fewer Data" link will be displayed at the bottom.
+
 @option {string} citation_id
-   Identifier of the citation of which we want to show the data. 
+   Identifier of the citation of which we want to show the data.
    The type of the identifier is defined through the parameter source.
 
 @option {string} source
-    Source of the citation of which we want to show the data. It could be one of the following constants: 
+    Source of the citation of which we want to show the data. It could be one of the following constants:
     <ul>
-       <li> Citation.MED_SOURCE:"MED"</li>
-       <li> Citation.PMC_SOURCE:"PMC"</li>
-       <li> Citation.PAT_SOURCE:"PAT"</li>
-       <li> Citation.ETH_SOURCE:"ETH"</li>
-       <li> Citation.HIR_SOURCE:"HIR"</li>
-       <li> Citation.CTX_SOURCE:"CTX"</li>
-       <li> Citation.CBA_SOURCE:"CBA"</li>
-       <li> Citation.AGR_SOURCE:"AGR"</li>
-       <li> Citation.DOI_SOURCE:"DOI"</li>
+       <li>"MED"</li>
+       <li>"PMC"</li>
+       <li>"PAT"</li>
+       <li>"ETH"</li>
+       <li>"HIR"</li>
+       <li>"CTX"</li>
+       <li>"CBA"</li>
+       <li>"AGR"</li>
+       <li>"DOI"</li>
     </ul>
-    
 
-@option {string} [loadingStatusImage="{BIOJS_HOME}/css/images/ajax-loader-1.gif"] 
+
+@option {string} [loadingStatusImage="{BIOJS_HOME}/css/images/ajax-loader-1.gif"]
    Relative path of the image to be displayed on loading status. If it's empty no loading image will be displayed.
-   
-@option {string} [proxyUrl="{BIOJS_HOME}/dependencies/proxy/proxy.php"] 
-   Relative path of the proxy to be used to make the call to the Europe PMC RESTFUL web service    
- 
-@option {bool} [showAbstract=true] 
+
+@option {bool} [showAbstract=true]
 	  If it's true then the abstract text is displayed at the bottom of the div container
 
-@option {string} [elementOrder="TITLE_FIRST"] 
+@option {string} [elementOrder="TITLE_FIRST"]
 	  It decides the order of display of the citation data. It could be one of the following:
 <ul>
-     <li>Citation.TITLE_FIRST:"TITLE_FIRST".  
+     <li>"TITLE_FIRST".
          In this case the order of the elements will be:
          <ol>
             <li>TITLE</li>
@@ -73,7 +70,7 @@ This component consists of two view `Citation` and `CitationList`.
             <li>SOURCE/IDENTIFIER</li>
         </ol>
       </li>
-      <li>Citation.AUTHORS_FIRST:"AUTHORS_FIRST". 
+      <li>"AUTHORS_FIRST".
       In this case the order of the elements will be:
       <ol>
             <li>AUTHORS</li>
@@ -84,10 +81,10 @@ This component consists of two view `Citation` and `CitationList`.
       </li>
 </ul>
 
-@option {string} [displayStyle="FULL_STYLE"] 
+@option {string} [displayStyle="FULL_STYLE"]
 It decides which citation data to display. It could be one of the following:
 <ul>
-     <li>Citation.FULL_STYLE:"FULL_STYLE".  
+     <li>"FULL_STYLE".
          In this case all the citation data will be displayed:
          <ol>
             <li>TITLE</li>
@@ -96,45 +93,62 @@ It decides which citation data to display. It could be one of the following:
             <li>SOURCE/IDENTIFIER</li>
          </ol>
       </li>
-      <li>Citation.TITLE_ONLY_STYLE:"TITLE_ONLY_STYLE". 
+      <li>"TITLE_ONLY_STYLE".
       In this case only the citation title will be displayed
       </li>
  </ul>
- 	
- 
+
+Example:
+
+```
+var pmc = require('biojs-vis-pmccitation');
+var instance = new pmc.Citation({
+  		target: 'YourOwnDivId',
+  		source: 'MED',
+  		citation_id: '23962577',
+  		width: 400,
+      	displayStyle: 'FULL_STYLE',
+      	elementOrder: 'TITLE_FIRST',
+      	showAbstract: true
+
+        });
+instance.load();
+```
+
+
 ### CitationList
 
 @param {Object} options An object with the options for CitationList component.
-   
+
 @option {string} [target='YourOwnDivId']
    Identifier of the DIV tag where the component should be displayed.
-   
+
 @option {int} width
    Width in pixels.
-   
-@option {int} [height=undefined] 
-   Height in pixels. Optional parameter. 
+
+@option {int} [height=undefined]
+   Height in pixels. Optional parameter.
    If it's specified the div container will extend its length up to that value and
-   if the actual length exceeds that value a "Show more Results/Show fewer Results" link will be displayed at the bottom.    
-   
-@option {string} query 
+   if the actual length exceeds that value a "Show more Results/Show fewer Results" link will be displayed at the bottom.
+
+@option {string} query
     The query used to find the matching citations in the Europe PMC system to display.
 
-@option {string} [loadingStatusImage="{BIOJS_HOME}/css/images/ajax-loader-1.gif"] 
+@option {string} [loadingStatusImage="{BIOJS_HOME}/css/images/ajax-loader-1.gif"]
    Relative path of the image to be displayed on loading status. If it's empty no loading image will be displayed.
 
-@option {string} [proxyUrl="{BIOJS_HOME}/dependencies/proxy/proxy.php"] 
-   Relative path of the proxy to be used to make the call to the Europe PMC RESTFUL web service    
-   
-@option {int} [numberResults=25] 
+@option {string} [proxyUrl="{BIOJS_HOME}/dependencies/proxy/proxy.php"]
+   Relative path of the proxy to be used to make the call to the Europe PMC RESTFUL web service
+
+@option {int} [numberResults=25]
 	  The number of citations displayed into the container from the results list set retrieved from the Europe PMC system. Therefore only the first X citations will be displayed,
    and if the number of total results is greater than X, there will be a link "See All Results" pointing to complete results list
    on the Europe PMC web site at the bottom of the container. The value could be between 1 and 25.
 
-@option {string} [elementOrder="TITLE_FIRST"] 
+@option {string} [elementOrder="TITLE_FIRST"]
 	  It decides the order of display of the citations data. It could be one of the following:
 <ul>
-     <li>CitationList.TITLE_FIRST:"TITLE_FIRST".  
+     <li>CitationList.TITLE_FIRST:"TITLE_FIRST".
          In this case the order of the elements will be:
          <ol>
             <li>TITLE</li>
@@ -143,7 +157,7 @@ It decides which citation data to display. It could be one of the following:
             <li>SOURCE/IDENTIFIER</li>
          </ol>
       </li>
-      <li>CitationList.AUTHORS_FIRST:"AUTHORS_FIRST". 
+      <li>CitationList.AUTHORS_FIRST:"AUTHORS_FIRST".
       In this case the order of the elements will be:
          <ol>
             <li>AUTHORS</li>
@@ -154,11 +168,11 @@ It decides which citation data to display. It could be one of the following:
       </li>
 </ul>
 
-@option {string} [displayStyle="FULL_STYLE"] 
+@option {string} [displayStyle="FULL_STYLE"]
 It decides which citations data to display. It could be one of the following:
 
  <ul>
-     <li>CitationList.FULL_STYLE:"FULL_STYLE".  
+     <li>CitationList.FULL_STYLE:"FULL_STYLE".
          In this case all the citations data will be displayed:
          <ol>
             <li>TITLE</li>
@@ -167,7 +181,7 @@ It decides which citations data to display. It could be one of the following:
             <li>SOURCE/IDENTIFIER</li>
          </ol>
       </li>
-      <li>CitationList.TITLE_ONLY_STYLE:"TITLE_ONLY_STYLE". 
+      <li>CitationList.TITLE_ONLY_STYLE:"TITLE_ONLY_STYLE".
       In this case only the citations title will be displayed
       </li>
  </ul>
@@ -180,7 +194,7 @@ Please submit all issues and pull requests to the [ftalo/biojs-vis-pmccitation](
 ## Support
 If you have any problem or suggestion please open an issue [here](https://github.com/ftalo/biojs-vis-pmccitation/issues).
 
-## License 
+## License
 
 
 This software is licensed under the Apache 2 license, quoted below.
